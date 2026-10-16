@@ -27,19 +27,20 @@ if (NOT "${WIX_APP}" STREQUAL "")
   list(APPEND CPACK_GENERATOR "WIX")
 endif()
 
-set(CPACK_PACKAGE_NAME "${CMAKE_PROJECT_PROPER_NAME}")
+set(CPACK_PACKAGE_NAME "${SYNERGY_DISPLAY_NAME}")
 
 # Menu Entry
-set(CPACK_WIX_PROGRAM_MENU_FOLDER "${CMAKE_PROJECT_PROPER_NAME}")
-set(CPACK_PACKAGE_EXECUTABLES "deskflow" "${CMAKE_PROJECT_PROPER_NAME}")
+set(CPACK_WIX_PROGRAM_MENU_FOLDER "${SYNERGY_DISPLAY_NAME}")
+set(CPACK_PACKAGE_EXECUTABLES "${CMAKE_PROJECT_NAME}" "${SYNERGY_DISPLAY_NAME}")
 
 # Default Install Path
-set(CPACK_PACKAGE_INSTALL_DIRECTORY "${CMAKE_PROJECT_PROPER_NAME}")
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "${SYNERGY_DISPLAY_NAME}")
 
 # Wix Specific Values
-set(CPACK_WIX_UPGRADE_GUID "027D1C8A-E7A5-4754-BB93-B2D45BFDBDC8")
-set(CPACK_WIX_UI_BANNER "${MY_DIR}/wix-banner.png")
-set(CPACK_WIX_UI_DIALOG "${MY_DIR}/wix-dialog.png")
+# Divergence from upstream: an upgrade code of its own, so this installer never replaces Deskflow.
+set(CPACK_WIX_UPGRADE_GUID "A3C62A76-13DA-45C9-A464-12B013D9FE6F")
+set(CPACK_WIX_UI_BANNER "${CMAKE_SOURCE_DIR}/extra/deploy/windows/wix-banner.png")
+set(CPACK_WIX_UI_DIALOG "${CMAKE_SOURCE_DIR}/extra/deploy/windows/wix-dialog.png")
 
 # Required Extra Extenstions
 list(APPEND CPACK_WIX_EXTENSIONS "WixToolset.Util.wixext" "WixToolset.Firewall.wixext")

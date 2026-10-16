@@ -111,6 +111,8 @@ unset(DESKFLOW_VERSION_MINOR)
 unset(DESKFLOW_VERSION_PATCH)
 unset(DESKFLOW_VERSION_TWEAK)
 
+include(${CMAKE_SOURCE_DIR}/extra/cmake/Synergy.cmake)
+
 message(STATUS "Building ${CMAKE_PROJECT_NAME}-${CMAKE_PROJECT_VERSION}")
 
 # Set lib versions

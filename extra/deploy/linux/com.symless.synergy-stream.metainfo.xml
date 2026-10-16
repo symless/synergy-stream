@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+	<id>com.symless.synergy-stream</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>GPL-2.0-only</project_license>
+	<name>Synergy Stream</name>
+	<developer id="org.deskflow">
+		<name>Deskflow Developers</name>
+	</developer>
+	<summary>Share a keyboard and mouse between computers</summary>
+	<description>
+		<p>
+			Synergy Stream continuously tracks Deskflow, the upstream community project, and comes with no warranty or guarantee.
+		</p>
+	</description>
+	<launchable type="desktop-id">com.symless.synergy-stream.desktop</launchable>
+	<url type="homepage">https://github.com/symless/synergy-stream</url>
+	<url type="vcs-browser">https://github.com/symless/synergy-stream</url>
+	<url type="help">https://github.com/deskflow/deskflow/wiki#user-guides</url>
+	<provides>
+		<id>com.symless.synergy-stream.desktop</id>
+	</provides>
+	<categories>
+		<category>Utility</category>
+	</categories>
+	<keywords>
+		<keyword>Input</keyword>
+		<keyword>Sharing</keyword>
+		<keyword translate="no">KVM</keyword>
+		<keyword translate="no">Synergy</keyword>
+		<keyword translate="no">Deskflow</keyword>
+	</keywords>
+	<content_rating type="oars-1.0" />
+</component>

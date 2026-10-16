@@ -36,6 +36,7 @@ ServerConfigDialog::ServerConfigDialog(QWidget *parent, ServerConfig &config)
       m_buttonBox{new SettingsDialogButtonBox(this)}
 {
   ui->setupUi(this);
+  ui->labelProtocol->setWhatsThis(ui->labelProtocol->whatsThis().replace(QStringLiteral("Deskflow"), kAppName));
   ui->tabWidget->setCurrentIndex(0);
   layout()->addWidget(m_buttonBox);
 

@@ -7,8 +7,9 @@
 
 #pragma once
 
-const auto kAppName = "@CMAKE_PROJECT_PROPER_NAME@";
+const auto kAppName = "@SYNERGY_DISPLAY_NAME@";
 const auto kAppId = "@CMAKE_PROJECT_NAME@";
+const auto kUpstreamId = "@UPSTREAM_PROJECT_NAME@";
 const auto kAppDescription = "@CMAKE_PROJECT_DESCRIPTION@";
 const auto kDaemonBinName = "@CMAKE_PROJECT_NAME@-daemon";
 const auto kDaemonIpcName = "@CMAKE_PROJECT_NAME@-daemon";
@@ -34,6 +35,7 @@ const auto kWindowsRuntimeMinor = @REQUIRED_MSVC_RUNTIME_MINOR@;
 // clang-format on
 
 constexpr auto kAppNameW = L"@CMAKE_PROJECT_PROPER_NAME@";
+constexpr auto kCoreBinNameW = L"@CORE_BINARY@";
 constexpr auto kCloseEventName = L"Global\\@CMAKE_PROJECT_PROPER_NAME@Close";
 constexpr auto kSendSasEventName = L"Global\\@CMAKE_PROJECT_PROPER_NAME@SendSAS";
 

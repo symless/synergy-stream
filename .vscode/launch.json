@@ -1,0 +1,108 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "unix - gui",
+      "type": "lldb-dap",
+      "cwd": "${workspaceRoot}",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/bin/synergy-stream",
+      "preLaunchTask": "build-silent",
+      "initCommands": ["settings set target.preload-symbols false"],
+      "osx": {
+        "program": "${workspaceFolder}/build/bin/SynergyStream.app/Contents/MacOS/SynergyStream"
+      }
+    },
+    {
+      "name": "unix - server",
+      "type": "lldb-dap",
+      "cwd": "${workspaceRoot}",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/bin/synergy-stream-core",
+      "args": ["server"],
+      "preLaunchTask": "build-silent",
+      "osx": {
+        "program": "${workspaceFolder}/build/bin/SynergyStream.app/Contents/MacOS/synergy-stream-core"
+      }
+    },
+    {
+      "name": "unix - client",
+      "type": "lldb-dap",
+      "cwd": "${workspaceRoot}",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/bin/synergy-stream-core",
+      "args": ["client"],
+      "preLaunchTask": "build-silent",
+      "osx": {
+        "program": "${workspaceFolder}/build/bin/SynergyStream.app/Contents/MacOS/synergy-stream-core"
+      }
+    },
+    {
+      "name": "unix - tests",
+      "type": "lldb-dap",
+      "cwd": "${workspaceRoot}",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "preLaunchTask": "build-silent"
+    },
+    {
+      "name": "unix - attach",
+      "type": "lldb-dap",
+      "request": "attach",
+      "pid": "${command:pickProcess}"
+    },
+    {
+      "name": "windows - gui",
+      "type": "cppvsdbg",
+      "cwd": "${workspaceRoot}",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/bin-copy/synergy-stream",
+      "internalConsoleOptions": "openOnSessionStart",
+      "preLaunchTask": "build-kill-gui"
+    },
+    {
+      "name": "windows - server",
+      "type": "cppvsdbg",
+      "cwd": "${workspaceRoot}",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/bin-copy/synergy-stream-core",
+      "args": ["server"],
+      "internalConsoleOptions": "openOnSessionStart",
+      "preLaunchTask": "build-kill-core"
+    },
+    {
+      "name": "windows - client",
+      "type": "cppvsdbg",
+      "cwd": "${workspaceRoot}",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/bin-copy/synergy-stream-core",
+      "args": ["client"],
+      "internalConsoleOptions": "openOnSessionStart",
+      "preLaunchTask": "build-kill-core"
+    },
+    {
+      "name": "windows - daemon",
+      "type": "cppvsdbg",
+      "cwd": "${workspaceRoot}",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/bin-copy/synergy-stream-daemon",
+      "args": ["-f"],
+      "internalConsoleOptions": "openOnSessionStart",
+      "preLaunchTask": "build-kill-core"
+    },
+    {
+      "name": "windows - tests",
+      "type": "cppvsdbg",
+      "cwd": "${workspaceRoot}",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "internalConsoleOptions": "openOnSessionStart"
+    },
+    {
+      "name": "windows - attach",
+      "type": "cppvsdbg",
+      "request": "attach",
+      "processId": "${command:pickProcess}"
+    }
+  ]
+}
