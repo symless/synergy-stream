@@ -131,6 +131,7 @@ void handleError(const char *message)
 
 #if defined(Q_OS_WIN)
   // Show a message box for when run from MSI in Win32 subsystem.
-  MessageBoxA(nullptr, message, "Deskflow daemon error", MB_OK | MB_ICONERROR);
+  const auto title = QStringLiteral("%1 daemon error").arg(kAppName).toStdString();
+  MessageBoxA(nullptr, message, title.c_str(), MB_OK | MB_ICONERROR);
 #endif
 }

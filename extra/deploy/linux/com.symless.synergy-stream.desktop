@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2024 Deskflow Developers
+# SPDX-FileCopyrightText: 2026 Synergy App Ltd
+# SPDX-License-Identifier: MIT
+
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Synergy Stream
+Comment=Synergy Stream continuously tracks Deskflow, the upstream community project, and comes with no warranty or guarantee.
+Exec=synergy-stream
+Icon=com.symless.synergy-stream
+Terminal=false
+Categories=Utility;
+Keywords=keyboard;mouse;sharing;network;share;
+Name[zh_CN]=Synergy Stream
+Keywords[zh_CN]=键盘;鼠标;网络;共享;
+Name[ru]=Synergy Stream
+Keywords[ru]=Передача;Трансляция;barrier;input-leap;
+Name[ko]=Synergy Stream
+Keywords[ko]=키보드;마우스;공유;네트워크;

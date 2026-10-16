@@ -1,0 +1,10 @@
+<RCC>
+    <qresource>
+        <file alias="icons/synergy-stream-dark/index.theme">synergy-stream-dark.theme</file>
+        <file alias="icons/synergy-stream-light/index.theme">synergy-stream-light.theme</file>
+        <file alias="icons/synergy-stream-dark/apps/64/com.symless.synergy-stream.svg">synergy.svg</file>
+        <file alias="icons/synergy-stream-dark/apps/64/com.symless.synergy-stream-symbolic.svg">synergy-symbolic-dark.svg</file>
+        <file alias="icons/synergy-stream-light/apps/64/com.symless.synergy-stream.svg">synergy.svg</file>
+        <file alias="icons/synergy-stream-light/apps/64/com.symless.synergy-stream-symbolic.svg">synergy-symbolic-light.svg</file>
+    </qresource>
+</RCC>
