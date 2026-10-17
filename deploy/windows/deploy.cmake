@@ -41,6 +41,7 @@ set(CPACK_PACKAGE_INSTALL_DIRECTORY "${SYNERGY_DISPLAY_NAME}")
 set(CPACK_WIX_UPGRADE_GUID "A3C62A76-13DA-45C9-A464-12B013D9FE6F")
 set(CPACK_WIX_UI_BANNER "${CMAKE_SOURCE_DIR}/extra/deploy/windows/wix-banner.png")
 set(CPACK_WIX_UI_DIALOG "${CMAKE_SOURCE_DIR}/extra/deploy/windows/wix-dialog.png")
+set(CPACK_WIX_PRODUCT_ICON "${CMAKE_SOURCE_DIR}/extra/src/apps/res/synergy.ico")
 
 # Required Extra Extenstions
 list(APPEND CPACK_WIX_EXTENSIONS "WixToolset.Util.wixext" "WixToolset.Firewall.wixext")
